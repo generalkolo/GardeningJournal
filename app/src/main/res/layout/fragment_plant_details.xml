@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="plant"
+            type="com.miu.cs473.gardenjournal.room.entity.Plant" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewPlantNameLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/plant_name"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPlantName"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewPlantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{plant.name}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPlantNameLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@+id/textViewPlantNameLabel"
+            app:layout_constraintTop_toTopOf="@+id/textViewPlantNameLabel"
+            tools:text="Plant Name" />
+
+        <TextView
+            android:id="@+id/textViewPlantTypeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/planting_type"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPlantType"
+
+            app:layout_constraintStart_toStartOf="@+id/textViewPlantNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlantNameLabel" />
+
+        <TextView
+            android:id="@+id/textViewPlantType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{plant.type}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPlantTypeLabel"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPlantName"
+
+            app:layout_constraintStart_toEndOf="@+id/textViewPlantTypeLabel"
+            app:layout_constraintTop_toTopOf="@+id/textViewPlantTypeLabel"
+            tools:text="Plant Type" />
+
+        <TextView
+            android:id="@+id/textViewWateringFrequencyLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/watering_frequency"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewWateringFrequency"
+
+            app:layout_constraintStart_toStartOf="@+id/textViewPlantNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlantTypeLabel" />
+
+        <TextView
+            android:id="@+id/textViewWateringFrequency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{String.format(@string/watering_frequency_format, plant.wateringFrequency)}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewWateringFrequencyLabel"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPlantName"
+            app:layout_constraintStart_toEndOf="@+id/textViewWateringFrequencyLabel"
+            app:layout_constraintTop_toTopOf="@+id/textViewWateringFrequencyLabel"
+            tools:text="Watering Frequency" />
+
+        <TextView
+            android:id="@+id/textViewPlantingDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/planting_date"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPlantingDate"
+            app:layout_constraintStart_toStartOf="@+id/textViewPlantNameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWateringFrequencyLabel" />
+
+        <TextView
+            android:id="@+id/textViewPlantingDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{plant.plantingDate}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPlantingDateLabel"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPlantName"
+
+            app:layout_constraintStart_toEndOf="@+id/textViewPlantingDateLabel"
+            app:layout_constraintTop_toTopOf="@+id/textViewPlantingDateLabel"
+            tools:text="Planting Date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

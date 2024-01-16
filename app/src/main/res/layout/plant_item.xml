@@ -1,0 +1,33 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="plant"
+            type="com.miu.cs473.gardenjournal.room.entity.Plant" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/plantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:text="@{plant.name}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="Plant name as we know it" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/black" />
+    </LinearLayout>
+</layout>

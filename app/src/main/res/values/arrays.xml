@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="plant_types">
+        <item>Flowering Plant</item>
+        <item>Herb</item>
+        <item>Vegetable</item>
+        <item>Shade-Loving Plant</item>
+        <item>Succulent</item>
+        <item>Fruit Tree</item>
+    </string-array>
+</resources>
